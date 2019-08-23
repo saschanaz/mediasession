@@ -758,7 +758,7 @@ interface MediaSession {
 
   void setActionHandler(MediaSessionAction action, MediaSessionActionHandler? handler);
 
-  void setPositionState(optional MediaPositionState? state);
+  void setPositionState(optional MediaPositionState? state = {});
 };
 </pre>
 
@@ -896,8 +896,7 @@ interface MediaSession {
 <h2 id="the-mediametadata-interface">The {{MediaMetadata}} interface</h2>
 
 <pre class="idl">
-
-[Constructor(optional MediaMetadataInit init), Exposed=Window]
+[Constructor(optional MediaMetadataInit init = {}), Exposed=Window]
 interface MediaMetadata {
   attribute DOMString title;
   attribute DOMString artist;
